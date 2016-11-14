@@ -17,12 +17,17 @@ $ composer require geekish/faker-horse-battery-staple
 ## Usage
 
 ``` php
+use Faker\Factory;
 use Geekish\FakerHorseBatteryStaple\BatteryStapleProvider;
 
-$faker = \Faker\Factory::create();
+$faker = Factory::create();
 $faker->addProvider(new BatteryStapleProvider($faker));
 
+// no delimiter - e.g. correcthorsebatterystaple
 echo $faker->correctHorseBatteryStaple;
+
+// with "." as delimiter - e.g. correct.horse.battery.staple
+echo $faker->correctHorseBatteryStaple('.');
 ```
 
 ## Change log
