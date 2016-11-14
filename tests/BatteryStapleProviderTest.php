@@ -29,4 +29,13 @@ class BatteryStapleProviderTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertNotEmpty($this->faker->correctHorseBatteryStaple);
     }
+
+    /**
+     * Test password generator with delimiter
+     */
+    public function testGenerateWithDelimiter()
+    {
+        $password = $this->faker->correctHorseBatteryStaple('.');
+        $this->assertRegExp('/((\w+)\.(\w+)\.(\w+)\.(\w+))/', $password);
+    }
 }
