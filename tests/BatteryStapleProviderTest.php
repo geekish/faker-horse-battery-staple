@@ -3,8 +3,9 @@
 namespace Geekish\FakerHorseBatteryStaple;
 
 use Faker\Generator;
+use PHPUnit\Framework\TestCase;
 
-class BatteryStapleProviderTest extends \PHPUnit_Framework_TestCase
+class BatteryStapleProviderTest extends TestCase
 {
     /**
      * @var Generator
