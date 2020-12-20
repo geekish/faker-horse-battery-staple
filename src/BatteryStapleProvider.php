@@ -10,7 +10,7 @@ use Yuloh\BatteryStaple\PasswordGenerator;
  */
 class BatteryStapleProvider extends BaseProvider
 {
-    public function correctHorseBatteryStaple($delimiter = '')
+    public function correctHorseBatteryStaple($delimiter = ''): string
     {
         return PasswordGenerator::generate($delimiter);
     }

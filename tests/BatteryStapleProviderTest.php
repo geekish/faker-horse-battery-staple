@@ -15,7 +15,7 @@ class BatteryStapleProviderTest extends TestCase
     /**
      * Set up Faker Generator with BatteryStapleProvider
      */
-    public function setUp()
+    protected function setUp(): void
     {
         $faker = new Generator;
         $faker->addProvider(new BatteryStapleProvider($faker));
@@ -37,6 +37,6 @@ class BatteryStapleProviderTest extends TestCase
     public function testGenerateWithDelimiter()
     {
         $password = $this->faker->correctHorseBatteryStaple('.');
-        $this->assertRegExp('/((\w+)\.(\w+)\.(\w+)\.(\w+))/', $password);
+        $this->assertMatchesRegularExpression('/((\w+)\.(\w+)\.(\w+)\.(\w+))/', $password);
     }
 }
