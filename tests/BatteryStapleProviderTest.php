@@ -37,6 +37,6 @@ class BatteryStapleProviderTest extends TestCase
     public function testGenerateWithDelimiter()
     {
         $password = $this->faker->correctHorseBatteryStaple('.');
-        $this->assertMatchesRegularExpression('/((\w+)\.(\w+)\.(\w+)\.(\w+))/', $password);
+        $this->assertRegExp('/((\w+)\.(\w+)\.(\w+)\.(\w+))/', $password);
     }
 }
